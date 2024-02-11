@@ -13,11 +13,13 @@
     font-family: kamerik-3d;
     src: url(../fonts/kamerik205-heavy.woff2);
     font-weight: 900;
+    font-display:swap;
 }
 
 @font-face {
     font-family: merriweather-italic-3d;
     src: url(../fonts/merriweather-regular-italic.woff2);
+    font-display:swap;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
     height: var(--logo-size);
     background-repeat: no-repeat;
     position: absolute;
-    left: calc(50% - calc(var(--logo-size) / 2));
+    left: calc(51% - calc(var(--logo-size) / 2));
     top: calc(var(--index) * 2.8);;
     z-index: 1;
 }
@@ -45,6 +47,7 @@ body {
 .layers__container{
     min-height: 500px;
     height: 100vh;
+    width: 100vw;
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
     will-change: transform;
@@ -102,7 +105,7 @@ body {
     text-transform: none;
     font-family: merriweather-italic-3d;
     letter-spacing: normal;
-    font-size: calc(var(--index) * .73);
+    font-size: calc(var(--index) * 1.45);
     line-height: 3;
 }
 
@@ -110,7 +113,7 @@ body {
 	font-family: Arial;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-size: calc(var(--index) * .71);
+	font-size: calc(var(--index) * 1.45);
 	letter-spacing: -.02vw;
 	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
 	background-color: transparent;
@@ -120,6 +123,15 @@ body {
 	outline: none;
 	cursor: pointer;
 	margin-top: calc(var(--index) * 2.5);
+}
+
+.button-start:hover {
+    color: #cdcaca;
+    border: rgba(182, 182, 182, .4) 3px solid;
+}
+
+.button-start:active {
+    transform: translateY(3px);
 }
 
 .layer-4, .layer-5, .layer-6 {
